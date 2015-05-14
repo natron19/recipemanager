@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   get '/home', to: 'pages#index'
 
-  resources :recipes 
-  
+  resources :recipes do 
+    member do 
+      post 'like' 
+    end 
+  end   
+
+
 end
