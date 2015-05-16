@@ -9,7 +9,7 @@ class Recipe < ActiveRecord::Base
   default_scope -> { order(updated_at: :desc)}
 
   has_many :recipe_styles 
-  has_many :sytles, through: :recipe_styles 
+  has_many :styles, through: :recipe_styles 
 
   has_many :recipe_ingredients 
   has_many :ingredients, through: :recipe_ingredients
